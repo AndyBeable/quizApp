@@ -6,8 +6,8 @@
 
 :root {
   --hue-netural: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
+  --wrong: rgb(236, 92, 92);
+  --correct: rgb(101, 190, 116);
 }
 
 body {
@@ -23,10 +23,10 @@ body {
 }
 
 body.correct {
-  --hue: var(--hue-correct);
+  background-color: var(--correct);
 }
 body.wrong {
-  --hue: var(--hue-wrong);
+  background-color: var(--wrong);
 }
 
 .container {
@@ -47,24 +47,24 @@ body.wrong {
 
 .btn {
   --hue: var(--hue-netural);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
+  border: 1px solid transparent;
+  background-color: rgb(131, 191, 240);
   border-radius: 5px;
   padding: 5px 10px;
-  color: #fff;
+  color: black;
   outline: none;
 }
 
 .btn:hover {
-  border: black;
+  border: 1px solid rgb(38, 83, 231);
 }
 
 .btn.correct {
-  --hue: var(--hue-correct);
+  background-color: var(--correct);
   color: black;
 }
 .btn.wrong {
-  --hue: var(--hue-wrong);
+  background-color: var(--wrong);
 }
 
 .start-btn,
